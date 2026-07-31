@@ -1,0 +1,539 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+    min-height:100vh;
+
+    margin:0;
+
+}
+
+.container{
+
+    background:white;
+
+    width:900px;
+
+    max-width:95%;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    margin:40px auto;
+
+}
+
+h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#0077cc;
+}
+
+label{
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    margin-bottom:18px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+input:focus{
+
+    border-color:#0077cc;
+
+    outline:none;
+
+    box-shadow:0 0 8px rgba(0,119,204,.4);
+
+}
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#0077cc;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-bottom:12px;
+}
+
+button:hover{
+
+    background:#005fa3;
+
+    transform:scale(1.03);
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* Register Button */
+
+.submit-btn{
+    background:#0077cc;
+}
+
+.submit-btn:hover{
+    background:#005fa3;
+}
+
+/* View Button */
+
+.view-btn{
+    background:#28a745;
+}
+
+.view-btn:hover{
+    background:#1f7d35;
+}
+
+/* Update Button */
+
+.update-btn{
+    background:#ff9800;
+}
+
+.update-btn:hover{
+    background:#e68900;
+}
+
+/* Delete Button */
+
+.delete-btn{
+    background:#dc3545;
+}
+
+.delete-btn:hover{
+    background:#b02a37;
+}
+
+/* Subtitle */
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-top:-10px;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+input::placeholder{
+
+    color:#999;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+/* ========================= */
+/* Delete Confirmation Modal */
+/* ========================= */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.5);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+.modal-content{
+
+    background:white;
+
+    width:400px;
+
+    max-width:90%;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+    animation:popup .3s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.modal-content h2{
+
+    color:#dc3545;
+
+    margin-bottom:15px;
+
+}
+
+.modal-content p{
+
+    color:#555;
+
+    margin-bottom:25px;
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.modal-buttons button{
+
+    margin:0;
+
+}
+
+.cancel-btn{
+
+    background:#6c757d;
+
+}
+
+.cancel-btn:hover{
+
+    background:#545b62;
+
+}
+
+.confirm-btn{
+
+    background:#dc3545;
+
+}
+
+.confirm-btn:hover{
+
+    background:#b02a37;
+
+}
+
+/* ===========================
+   Student Records Table
+=========================== */
+
+.student-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+.student-table th{
+
+    background:#0077cc;
+
+    color:white;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+.student-table td{
+
+    padding:12px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.student-table tr:nth-child(even){
+
+    background:#f8f9fa;
+
+}
+
+.student-table tr:hover{
+
+    background:#d6ecff;
+
+    transition:.3s;
+
+}
+
+.dashboard{
+
+    display:flex;
+
+    gap:20px;
+
+    margin:20px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    flex:1;
+
+    background:#0077cc;
+
+    color:white;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.2);
+
+}
+
+.card h3{
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.card h1{
+
+    font-size:36px;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.footer{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+    text-shadow:1px 1px 4px rgba(0,0,0,0.4);
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+.dark-mode{
+
+    background:#121212;
+
+    color:white;
+
+}
+
+.dark-mode .container{
+
+    background:#1e1e1e;
+
+    color:white;
+
+}
+
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode label,
+.dark-mode p{
+
+    color:white;
+
+}
+
+.dark-mode input{
+
+    background:#2b2b2b;
+
+    color:white;
+
+    border:1px solid #555;
+
+}
+
+.dark-mode input::placeholder{
+
+    color:#bbb;
+
+}
+
+.dark-mode .student-table th{
+
+    background:#000;
+
+}
+
+.dark-mode .student-table td{
+
+    background:#2b2b2b;
+
+    color:white;
+
+    border-color:#555;
+
+}
+
+.dark-mode .student-table tr:nth-child(even){
+
+    background:#333;
+
+}
+
+.dark-mode .student-table tr:hover{
+
+    background:#444;
+
+}
+
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width:768px){
+
+    .container{
+
+        width:95%;
+
+        padding:20px;
+
+    }
+
+    .dashboard{
+
+        flex-direction:column;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+    .student-table{
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
+
+}
